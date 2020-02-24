@@ -17,6 +17,7 @@ ADD   https://github.com/RedHatTraining/DO288-apps/releases/download/OCP-4.1-1/h
 
 COPY  run-app.sh /opt/app-root/bin/
 
+# To be used by openshift files should be ownership by root group and grant execution permissions
 RUN   chown -R wildfly:root /opt/app-root && \
       chmod -R 770 /opt/app-root
 
